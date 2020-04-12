@@ -1,4 +1,7 @@
-// Objek destructuring
+// Objek destructuring---
+// bisa jg digabung dgn Rest Operator/Parameter
+// jika isi objek yg akan ditangkap tidak diketahui jumlahnya,
+// akan menghasilkan objek lagi.
 const profile = {
     firstName: "John",
     lastName: "Doe",
@@ -13,6 +16,18 @@ console.log(localFirstName);
 console.log(localLastName);
 console.log(localAge);
 
+// Assignment tanpa deklarasi object yg menampung/ditampung
+// ({
+//     firstName: localFirstName,
+//     lastName: localLastName,
+//     age: localAge
+// } = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 18
+// });
+
+// jika objeknya ada (sama saja)
 ({
     firstName: localFirstName,
     lastName: localLastName,
@@ -25,7 +40,8 @@ console.log(localAge);
 
 
 
-// Array destructuring
+// Array destructuring---
+// (bisa utk swap item dan menangkap return value pada function)
 const favorites = ["Seafood"];
 
 const [myFood, herFood = "Salad"] = favorites
@@ -34,7 +50,8 @@ console.log(myFood);
 console.log(herFood);
 
 
-// Spreading operator
+
+// Spreading operator---
 const numbers = [12, 32, 90, 12, 32];
 
 
@@ -56,7 +73,7 @@ console.log(allMakanan);
 
 
 
-// Rest operator
+// Rest operator---
 // dalam membuat variadic function
 function sum(...numbers) {
     var result = 0;
@@ -74,4 +91,34 @@ const [manufacture, weight, door, ...items] = refrigerator;
 console.log(manufacture);
 console.log(weight);
 console.log(door);
-console.log(items);
+console.log(items); // variabel items berupa array
+
+
+
+/* 
+    dari WPU
+    Mengambil field pada object, setelah dikirim sebagai parameter
+    untuk function (destructuring objek)
+*/
+
+const mhs = {
+    id: 123,
+    nama: 'Sandhika Galih',
+    umur: 33,
+    email: 'sandhikagalih@unpas.ac.id'
+}
+
+// function getIdMhs({ id }) {
+//     return id;
+// }
+
+function getIdNamaMhs({
+    id,
+    nama
+}) {
+    result = nama + ', ' + id;
+    return result;
+}
+
+// console.log(getIdMhs(mhs));
+console.log(getIdNamaMhs(mhs));
