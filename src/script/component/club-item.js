@@ -23,10 +23,12 @@ class ClubItem extends HTMLElement {
         }
         
         .fan-art-club {
-          width: 100%;
+          display: block;
+          width: 40%;
           max-height: 300px;
           object-fit: cover;
           object-position: center;
+          margin: 25px auto 0;
         }
         
         .club-info {
@@ -48,10 +50,10 @@ class ClubItem extends HTMLElement {
         }
       </style>
     
-      <img class="fan-art-club" src="${this._club.fanArt}" alt="Fan Art">
+      <img class="fan-art-club" src="${this._club.strTeamBadge}" alt="Fan Art">
       <div class="club-info">
-        <h2>${this._club.name}</h2>
-        <p>${this._club.description}</p>
+        <h2>${this._club.strTeam}</h2>
+        <p>${this._club.strDescriptionEN}</p>
       </div>
     `;
   }
