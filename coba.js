@@ -51,6 +51,7 @@ console.log(herFood);
 
 
 
+console.log('___________________\nSpread & Rest Operator');
 // Spreading operator---
 const numbers = [12, 32, 90, 12, 32];
 
@@ -103,7 +104,7 @@ console.log(items); // variabel items berupa array
 
 const mhs = {
     id: 123,
-    nama: 'Sandhika Galih',
+    nama: 'Sandhika Gaaalih',
     umur: 33,
     email: 'sandhikagalih@unpas.ac.id'
 }
@@ -122,3 +123,37 @@ function getIdNamaMhs({
 
 // console.log(getIdMhs(mhs));
 console.log(getIdNamaMhs(mhs));
+
+
+
+
+
+console.log('MODULE_________________________\n');
+//* EKSPORT IMPORT Module JS----------------------------------------
+
+const coffeeStock = {
+    arabica: 100,
+    robusta: 150,
+    liberica: 200
+}
+//* pada Node.Js
+// module.exports = coffeeStock;
+// console.log(module);
+
+/* untuk mengimpor pake require()
+
+const {coffeeStock, isCoffeeMakerReady} = require('./state.js');
+
+*/
+
+
+//* pada ES6
+// export default coffeeStock; // gunakan export {}; untuk multiple
+
+/* untuk mengimpor pake import..from"./..."
+
+import coffeeStock from "./state.js";   // kalo hanya 1 variabel, bebas pake nama apa aja
+
+wants multiple but different name, use "as"
+import { coffeeStock as stock, isCoffeeMakerReady } from "./state.js";
+*/
